@@ -11,7 +11,8 @@ To run the program, you need to have the following dependencies installed:
 
 - Java Development Kit (JDK) 8 or later
 
-Exceptions
+##Exceptions
+
 The program may throw the following exceptions:
 
 1- **NotValidAutosarFileException**: This is a user-defined checked exception that is thrown when the input file is not a valid Autosar XML file with a ".arxml" extension. The exception message will indicate that the file is not a valid Autosar file.
