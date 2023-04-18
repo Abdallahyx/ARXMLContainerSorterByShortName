@@ -38,16 +38,62 @@ Or you can open cmd and run these commands:
 
 ```
 javac *.java
-
 ```
 
 - To test the program:
 
 ```
 java App Sample.arxml
+```
+## Examples
 
+Here's an example of how to use the program:
+
+Suppose we have an input ARXML file named Sample.arxml with the following contents:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68a">
+       <SHORT-NAME>ContainerB</SHORT-NAME>
+       <LONG-NAME>AA</LONG-NAME>
+   </CONTAINER>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68b">
+       <SHORT-NAME>ContainerA</SHORT-NAME>
+       <LONG-NAME>BB</LONG-NAME>
+   </CONTAINER>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68c">
+       <SHORT-NAME>ContainerC</SHORT-NAME>
+       <LONG-NAME>CC</LONG-NAME>
+   </CONTAINER>
+</AUTOSAR>
 ```
 
+To reorder the containers alphabetically by their sub-container name "SHORT-NAME", we can run the following command:
+
+```
+java App Sample.arxml
+```
+
+After the program has executed, the output file named Sample_mod.arxml will contain the reordered containers:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68a">
+       <SHORT-NAME>ContainerA</SHORT-NAME>
+       <LONG-NAME>BB</LONG-NAME>
+   </CONTAINER>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68b">
+       <SHORT-NAME>ContainerB</SHORT-NAME>
+       <LONG-NAME>AA</LONG-NAME>
+   </CONTAINER>
+   <CONTAINER UUID="198ae269-8478-44bd-92b5-14982c4ff68c">
+       <SHORT-NAME>ContainerC</SHORT-NAME>
+       <LONG-NAME>CC</LONG-NAME>
+   </CONTAINER>
+</AUTOSAR>
+```
 
 
 
