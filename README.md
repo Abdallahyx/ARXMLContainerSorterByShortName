@@ -11,7 +11,7 @@ To run the program, you need to have the following dependencies installed:
 
 - Java Development Kit (JDK) 8 or later
 
-##Exceptions
+## Exceptions
 
 The program may throw the following exceptions:
 
